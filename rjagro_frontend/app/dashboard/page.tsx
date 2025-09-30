@@ -40,6 +40,8 @@ import BatchClosureSummaryTable from '../components/tables/batch_closure_summary
 import { fetchBatchSales, handleAddBatchSale } from '../api/batch_sales';
 import BatchSalesTable from '../components/tables/batch_sales';
 import { ItemCategory } from '../types/enums';
+import Greeter from '../components/Greeter';
+
 
 const Dashboard = () => {
     const { user } = useAuth();
@@ -563,7 +565,7 @@ const Dashboard = () => {
         <div className="min-h-screen bg-gray-100">
             <div className="p-6">
                 <h1 className="text-2xl font-bold text-gray-800 mb-6">Dashboard</h1>
-
+                <Greeter user={user} />
                 {/* Tab Navigation */}
                 <div className="mb-6">
                     {/* Desktop tabs - hidden on mobile */}
